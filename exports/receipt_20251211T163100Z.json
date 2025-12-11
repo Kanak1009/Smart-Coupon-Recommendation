@@ -1,0 +1,113 @@
+{
+  "generated_at_utc": "2025-12-11T16:31:00.537338",
+  "cart_total": 1798.0,
+  "items": [
+    {
+      "product_id": "P001",
+      "name": "Wireless Mouse",
+      "category": "ELECTRONICS",
+      "unit_price": 799.0,
+      "quantity": 1,
+      "subtotal": 799.0
+    },
+    {
+      "product_id": "P003",
+      "name": "USB-C Charger 25W",
+      "category": "ELECTRONICS",
+      "unit_price": 999.0,
+      "quantity": 1,
+      "subtotal": 999.0
+    }
+  ],
+  "recommended_coupon": {
+    "coupon_code": "WELCOME10",
+    "savings": 179.8,
+    "final_total": 1618.2
+  },
+  "evaluations": [
+    {
+      "coupon_code": "WELCOME10",
+      "eligible": true,
+      "applicable_amount": 1798.0,
+      "savings": 179.8,
+      "final_total": 1618.2
+    },
+    {
+      "coupon_code": "ELEC150",
+      "eligible": true,
+      "applicable_amount": 1798.0,
+      "savings": 150.0,
+      "final_total": 1648.0
+    },
+    {
+      "coupon_code": "SAVE50",
+      "eligible": true,
+      "applicable_amount": 1798.0,
+      "savings": 50.0,
+      "final_total": 1748.0
+    },
+    {
+      "coupon_code": "ELEC20",
+      "eligible": false,
+      "applicable_amount": 1798.0,
+      "savings": 0.0,
+      "final_total": 1798.0
+    },
+    {
+      "coupon_code": "GROC5",
+      "eligible": false,
+      "applicable_amount": 0.0,
+      "savings": 0.0,
+      "final_total": 1798.0
+    },
+    {
+      "coupon_code": "GROC100",
+      "eligible": false,
+      "applicable_amount": 0.0,
+      "savings": 0.0,
+      "final_total": 1798.0
+    },
+    {
+      "coupon_code": "APPAREL25",
+      "eligible": false,
+      "applicable_amount": 0.0,
+      "savings": 0.0,
+      "final_total": 1798.0
+    },
+    {
+      "coupon_code": "APPAREL100",
+      "eligible": false,
+      "applicable_amount": 0.0,
+      "savings": 0.0,
+      "final_total": 1798.0
+    },
+    {
+      "coupon_code": "CARE15",
+      "eligible": false,
+      "applicable_amount": 0.0,
+      "savings": 0.0,
+      "final_total": 1798.0
+    },
+    {
+      "coupon_code": "HOME10",
+      "eligible": false,
+      "applicable_amount": 0.0,
+      "savings": 0.0,
+      "final_total": 1798.0
+    },
+    {
+      "coupon_code": "BIGSAVE300",
+      "eligible": false,
+      "applicable_amount": 1798.0,
+      "savings": 0.0,
+      "final_total": 1798.0
+    },
+    {
+      "coupon_code": "OLD_OFFER",
+      "eligible": false,
+      "applicable_amount": 0.0,
+      "savings": 0.0,
+      "final_total": 1798.0
+    }
+  ]
+}

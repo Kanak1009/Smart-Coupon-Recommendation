@@ -2,7 +2,7 @@ import os
 import sys
 from datetime import date
 from typing import Dict
-
+from .utils import build_receipt_payload, export_receipt_json
 from .data_loader import load_products, load_coupons
 from .engine import evaluate_coupons_for_cart, recommend_best_coupon
 
@@ -98,7 +98,6 @@ def main():
         evaluated = evaluate_coupons_for_cart(coupons, products, cart, today=date.today())
 
         pretty_print_recommendations(evaluated)
-
         best = recommend_best_coupon(evaluated)
         if best:
             print(f"\nRecommended coupon -> {best['coupon_code']}  (saves ₹{best['savings']:.2f})")
@@ -110,10 +109,20 @@ def main():
                 print(f"\nApplicable amount: ₹{best['applicable_amount']:.2f}")
                 print(f"Savings: ₹{best['savings']:.2f}")
                 print(f"Final total: ₹{best['final_total']:.2f}")
+            # Offer export
+            export_now = input("Export receipt to JSON? (y/N): ").strip().lower()
+            if export_now == "y":
+                payload = build_receipt_payload(cart, products, best, evaluated)
+                outpath = export_receipt_json(payload)
+                print(f"Receipt exported to: {outpath}")
         else:
             print("\nNo eligible coupon found for this cart.")
+            export_now = input("Export receipt (without coupon) to JSON? (y/N): ").strip().lower()
+            if export_now == "y":
+                payload = build_receipt_payload(cart, products, best if best else {}, evaluated)
+                outpath = export_receipt_json(payload)
+                print(f"Receipt exported to: {outpath}")
 
-        print("\n" + "=" * 70 + "\n")
 
 if __name__ == "__main__":
     main()
